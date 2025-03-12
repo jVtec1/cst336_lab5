@@ -1,6 +1,13 @@
 import express from 'express';
 import fetch from 'node-fetch';
+//needed to use node with vercel
+import path from "path";
+import { fileURLToPath } from "url";
+
 const planets = (await import('npm-solarsystem')).default;
+//needed to use node with vercel
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=solar%20system&per_page=50&orientation=horizontal";
 let response = await fetch(url);
@@ -9,6 +16,8 @@ let size = Object.keys(data.hits).length;
 
 const app = express();
 app.set("view engine", "ejs");
+//needed to use node with vercel
+app.set("views", path.join(__dirname, "views")); // Ensure this points to the correct directory
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {  
@@ -62,9 +71,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on localhost:${PORT}`);
 });
 
+//needed to use node with vercel
 export default app;
-
-// app.listen(3000, () => {
-//     console.log('server started');
-//     console.log('localhost:3000');
-// });
