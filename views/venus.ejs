@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus</title>
+</head>
+<body>
+    <h1>Venus</h1>
+    <%- include('partials/navbar.ejs')%>
+    <h3> Distance from Sun: <%= venus.distanceFromSun %></h3>
+    <h3> Length of Year: <%= venus.yearLength %></h3>
+    <h4> Description: <%= venus.description %></h4>
+    <img src="<%= venus.image %>" width="40%" length="40%">
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

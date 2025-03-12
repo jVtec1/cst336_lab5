@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+</head>
+<body>
+    <h1>Saturn</h1>
+    <%- include('partials/navbar.ejs')%>
+    <h3> Distance from Sun: <%= saturn.distanceFromSun %></h3>
+    <h3> Length of Year: <%= saturn.yearLength %></h3>
+    <h4> Description: <%= saturn.description %></h4>
+    <img src="<%= saturn.image %>" width="50%" length="50%">
+    <%- include('partials/footer.ejs')%>
+</body>
+</html>

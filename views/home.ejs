@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <!-- background="<%= img %>" put this in body tag (inline)-->
+    
+    <h1>Solar System</h1>
+    <%- include('partials/navbar.ejs')%>
+    <%- include('partials/footer.ejs')%>
+
+    <br>
+    <form action="/planetInfo">
+        <select>
+            <option>Mercury</option>
+            <option>Venus</option>
+            <option>Earth</option>
+            <option>Mars</option>
+        </select>
+    </form>
+    <button>Get Info</button>
+    <img src="<%= img %>">
+
+
+</body>
+</html>
