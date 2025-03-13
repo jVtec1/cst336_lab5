@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="../public/style.css" rel="stylesheet">
 </head>
 <body>
     <h1><%= name %></h1>
     <%- include('partials/navbar.ejs')%>
-    <%- include('partials/footer.ejs')%>
 
     <a href="<%= planet.websiteLink %>" target="_blank">Website Link</a>
     <p>Distance from the Sun: <%= planet.distanceFromSun %></p>
@@ -19,6 +19,8 @@
     <p>Description: <%= planet.description %></p>
 
     <img src="<%= planet.image %>" alt="<%= name %> image not working">
+
+    <%- include('partials/footer.ejs')%>
     
 </body>
 </html>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="../public/style.css" rel="stylesheet">
 </head>
-<body>
+<body background="<%= img %>">
     <!-- background="<%= img %>" put this in body tag (inline)-->
     
-    <h1>Solar System</h1>
+    <h1 style="background-color: white;">Solar System</h1>
     <%- include('partials/navbar.ejs')%>
-    <%- include('partials/footer.ejs')%>
 
     <br>
     <form action="/getPlanetInfo">
@@ -36,8 +36,8 @@
          <button>Get Info</button>
     </form>
    
-    <img src="<%= img %>">
 
+    <%- include('partials/footer.ejs')%>    
 
 </body>
 </html>
