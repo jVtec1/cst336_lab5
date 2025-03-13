@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= name %></h1>
+    <%- include('partials/navbar.ejs')%>
+    <%- include('partials/footer.ejs')%>
+
+    <a href="<%= planet.websiteLink %>" target="_blank">Website Link</a>
+    <p>Distance from the Sun: <%= planet.distanceFromSun %></p>
+    <p>Year Length: <%= planet.yearLength %></p>
+    <p>Length of Day: <%= planet.oneEarthDay %></p>
+    <p>Planet Radius: <%= planet.radius %></p>
+    <p>Number of Moons: <%= planet.moons %></p>
+    <p>Description: <%= planet.description %></p>
+
+    <img src="<%= planet.image %>" alt="<%= name %> image not working">
+    
+</body>
+</html>

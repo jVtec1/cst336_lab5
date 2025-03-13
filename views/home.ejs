@@ -13,15 +13,29 @@
     <%- include('partials/footer.ejs')%>
 
     <br>
-    <form action="/planetInfo">
-        <select>
-            <option>Mercury</option>
-            <option>Venus</option>
-            <option>Earth</option>
-            <option>Mars</option>
+    <form action="/getPlanetInfo">
+        <select name="planet">
+            <option value="Mercury">Mercury</option>
+            <option value="Venus">Venus</option>
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturn">Saturn</option>
+            <option value="Uranus">Uranus</option>
+            <option value="Neptune">Neptune</option>
         </select>
+         <button>Get Info</button>
     </form>
-    <button>Get Info</button>
+
+    <br>
+    <form action="/getComAstInfo">
+        <select name="Obj">
+            <option value="Comets">Comets</option>
+            <option value="Asteroids">Asteroids</option>
+        </select>
+         <button>Get Info</button>
+    </form>
+   
     <img src="<%= img %>">
 
 
